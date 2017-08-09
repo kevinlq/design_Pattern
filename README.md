@@ -1,3 +1,3 @@
-## Design mode about
+## Design Pattern about
 
-### 1. simple factory mode
+### 1. Simple Factory Pattern

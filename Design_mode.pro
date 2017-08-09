@@ -27,4 +27,7 @@ win32{
 
 DEPENDPATH += bin
 
+include($$PWD/src/src.pri)
+INCLUDEPATH +=$$PWD/src
+
 SOURCES += main.cpp
