@@ -1,4 +1,4 @@
-﻿#ifndef OPERATORMUL_H
+#ifndef OPERATORMUL_H
 #define OPERATORMUL_H
 
 #include "operator.h"
@@ -9,7 +9,7 @@ public:
     OperatorMul();
     ~OperatorMul();
 
-    double getResult() override;
+    double virtual getResult();
 };
 
 #endif // OPERATORMUL_H

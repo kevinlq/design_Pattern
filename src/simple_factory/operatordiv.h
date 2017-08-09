@@ -1,4 +1,4 @@
-﻿#ifndef OPERATORDIV_H
+#ifndef OPERATORDIV_H
 #define OPERATORDIV_H
 
 #include "operator.h"
@@ -9,7 +9,7 @@ public:
     OperatorDiv();
     ~OperatorDiv();
 
-    double getResult();
+    double virtual getResult();
 };
 
 #endif // OPERATORDIV_H

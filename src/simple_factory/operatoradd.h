@@ -1,4 +1,4 @@
-﻿#ifndef OPERATORADD_H
+#ifndef OPERATORADD_H
 #define OPERATORADD_H
 
 #include "operator.h"
@@ -9,7 +9,7 @@ public:
     OperatorAdd();
     ~OperatorAdd();
 
-    double getResult() override;
+    double virtual getResult();
 };
 
 #endif // OPERATORADD_H

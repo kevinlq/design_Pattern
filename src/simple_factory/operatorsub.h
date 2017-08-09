@@ -1,4 +1,4 @@
-﻿#ifndef OPERATORSUB_H
+#ifndef OPERATORSUB_H
 #define OPERATORSUB_H
 
 #include "operator.h"
@@ -9,7 +9,7 @@ public:
     OperatorSub();
     ~OperatorSub();
 
-    double getResult() override;
+    double virtual getResult();
 };
 
 #endif // OPERATORSUB_H
