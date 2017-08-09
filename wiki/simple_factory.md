@@ -35,7 +35,7 @@ private:
 };
 ```
 
-主函数，这里使用了工厂进行按需初始化()使用了智能指针
+主函数，这里使用了工厂进行按需初始化(使用了智能指针)
 ```C++
 #include <QCoreApplication>
 #include <QDebug>
