@@ -1,3 +1,3 @@
 ## Design mode about
 
-### simple factory mode
+### 1. simple factory mode
