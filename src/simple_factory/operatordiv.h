@@ -3,7 +3,7 @@
 
 #include "operator.h"
 
-class OperatorDiv : public Operator
+class OperatorDiv : public OperatorBase
 {
 public:
     OperatorDiv();

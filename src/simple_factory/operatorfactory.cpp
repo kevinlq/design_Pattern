@@ -14,9 +14,9 @@ OperatorFactory::~OperatorFactory()
 {
 }
 
-Operator *OperatorFactory::createOperate(unsigned char op)
+OperatorBase *OperatorFactory::createOperate(OPERATOR op)
 {
-    Operator *oper = nullptr;
+    OperatorBase *oper = nullptr;
 
     switch (op)
     {

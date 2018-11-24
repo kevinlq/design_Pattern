@@ -1,25 +1,28 @@
 #include <QCoreApplication>
-#include <QDebug>
-#include <QScopedPointer>
 
-#include "simple_factory/operator.h"
-#include "simple_factory/operatorfactory.h"
+#include <QtTest>
 
-#include "simple_factory/operatoradd.h"
+#include "test/TestSimpleFactory.h"
+
+int AssertTest(QObject* obj)
+{
+    int status = QTest::qExec(obj);
+
+    if (obj != NULL)
+    {
+        delete obj;
+        obj = NULL;
+    }
+
+    return status;
+}
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QScopedPointer<Operator> oper(OperatorFactory::createOperate(1));
-    if (oper){
-        oper->setNumberA(12);
-        oper->setNumberB(4);
+    int status = 0;
+    status = AssertTest( new TestSimpleFactory());
 
-        double result = oper->getResult();
-
-        qDebug()<<"result:"<<result;
-    }
-
-    return a.exec();
+    return status;
 }

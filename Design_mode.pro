@@ -1,4 +1,5 @@
-QT += core
+include($$PWD/Design_mode.pri)
+QT += core testlib
 QT -= gui
 
 CONFIG += c++11
@@ -9,25 +10,14 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-win32{
-    CONFIG += debug_and_release
-    CONFIG(release, debug|release) {
-            target_path = build_/release
-            TARGET  = Design_mode
-        } else {
-            target_path = build_/debug
-            TARGET  = Design_mode
-        }
-        DESTDIR = bin
-        MOC_DIR = $$target_path/moc
-        RCC_DIR = $$target_path/rcc
-        UI_DIR  = $$target_path/ui
-        OBJECTS_DIR = $$target_path/obj
-}
+include($$PWD/src/simple_factory.pri)
 
-DEPENDPATH += bin
-
-include($$PWD/src/src.pri)
 INCLUDEPATH +=$$PWD/src
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    test/DesignTest.cpp \
+    test/TestSimpleFactory.cpp
+
+HEADERS += \
+    test/DesignTest.h \
+    test/TestSimpleFactory.h

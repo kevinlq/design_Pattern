@@ -3,11 +3,11 @@
 
 struct DataPrivate;
 
-class Operator
+class OperatorBase
 {
 public:
-    Operator();
-    virtual ~Operator() = 0;
+    OperatorBase();
+    virtual ~OperatorBase() = 0;
 
     void setNumberA(double x);
     double getNumberA();

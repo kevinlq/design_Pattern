@@ -1,7 +1,7 @@
 ﻿#ifndef OPERATORFACTORY_H
 #define OPERATORFACTORY_H
 
-class Operator;
+class OperatorBase;
 
 typedef enum enum_OPERATOR{
     OP_ADD = 0,
@@ -16,7 +16,7 @@ public:
     OperatorFactory();
     ~OperatorFactory();
 
-    static Operator * createOperate(unsigned char op);
+    static OperatorBase * createOperate(OPERATOR op);
 };
 
 #endif // OPERATORFACTORY_H

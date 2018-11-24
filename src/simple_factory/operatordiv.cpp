@@ -13,7 +13,7 @@ double OperatorDiv::getResult()
     double result;
 
     if (getNumberB() == 0)
-        return 0;
+        return 0.0f;
 
     result = getNumberA() / getNumberB();
 

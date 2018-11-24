@@ -7,31 +7,31 @@ struct DataPrivate{
     double dm_number2;
 };
 
-Operator::Operator()
+OperatorBase::OperatorBase()
 {
     m_dPtr = new DataPrivate;
 }
 
-Operator::~Operator()
+OperatorBase::~OperatorBase()
 {
 }
 
-void Operator::setNumberA(double x)
+void OperatorBase::setNumberA(double x)
 {
     m_dPtr->dm_number1 = x;
 }
 
-double Operator::getNumberA()
+double OperatorBase::getNumberA()
 {
     return m_dPtr->dm_number1;
 }
 
-void Operator::setNumberB(double y)
+void OperatorBase::setNumberB(double y)
 {
     m_dPtr->dm_number2 = y;
 }
 
-double Operator::getNumberB()
+double OperatorBase::getNumberB()
 {
     return m_dPtr->dm_number2;
 }
