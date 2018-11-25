@@ -1,11 +1,6 @@
 #include "TestSimpleFactory.h"
 
-#include <qtest.h>
-
-#include <QDebug>
-#include <QScopedPointer>
-
-#include <exception>
+#include "TestHelper.h"
 
 #include "simple_factory/operator.h"
 #include "simple_factory/operatorfactory.h"
@@ -13,56 +8,54 @@
 
 TestSimpleFactory::TestSimpleFactory(QObject *parent) : QObject(parent)
 {
+    m_pOperate = NULL;
+}
+
+void TestSimpleFactory::cleanup()
+{
+    SAFE_DELETE(m_pOperate);
 }
 
 void TestSimpleFactory::testAddOperator()
 {
-    OperatorBase *pOperAdd = OperatorFactory::createOperate(OP_ADD);
-    QVERIFY2(pOperAdd != Q_NULLPTR, "oper is null");
-    pOperAdd->setNumberA(12);
-    pOperAdd->setNumberB(4);
+    m_pOperate = OperatorFactory::createOperate(OP_ADD);
+    QVERIFY2(m_pOperate != Q_NULLPTR, "oper is null");
+    m_pOperate->setNumberA(12);
+    m_pOperate->setNumberB(4);
 
-    double result = pOperAdd->getResult();
+    double result = m_pOperate->getResult();
     qDebug()<<"and result:"<<result;
-
-    delete pOperAdd;
 }
 
 void TestSimpleFactory::testSubOperator()
 {
-    OperatorBase *pOperSub = OperatorFactory::createOperate(OP_SUB);
-    QVERIFY2(pOperSub != Q_NULLPTR, "oper is null");
-    pOperSub->setNumberA(12);
-    pOperSub->setNumberB(4);
+    m_pOperate = OperatorFactory::createOperate(OP_SUB);
+    QVERIFY2(m_pOperate != Q_NULLPTR, "oper is null");
+    m_pOperate->setNumberA(12);
+    m_pOperate->setNumberB(4);
 
-    double result = pOperSub->getResult();
+    double result = m_pOperate->getResult();
     qDebug()<<"sub result:"<<result;
-
-    delete pOperSub;
 }
 
 void TestSimpleFactory::testMulOperator()
 {
-    OperatorBase *pOperMul = OperatorFactory::createOperate(OP_MUL);
-    QVERIFY2(pOperMul != Q_NULLPTR, "oper is null");
-    pOperMul->setNumberA(12);
-    pOperMul->setNumberB(4);
+    m_pOperate = OperatorFactory::createOperate(OP_MUL);
+    QVERIFY2(m_pOperate != Q_NULLPTR, "oper is null");
+    m_pOperate->setNumberA(12);
+    m_pOperate->setNumberB(4);
 
-    double result = pOperMul->getResult();
+    double result = m_pOperate->getResult();
     qDebug()<<"mul result:"<<result;
-
-    delete pOperMul;
 }
 
 void TestSimpleFactory::testDivOperator()
 {
-    OperatorBase *pOperDiv = OperatorFactory::createOperate(OP_DIV);
-    QVERIFY2(pOperDiv != Q_NULLPTR, "oper is null");
-    pOperDiv->setNumberA(12);
-    pOperDiv->setNumberB(4);
+    m_pOperate = OperatorFactory::createOperate(OP_DIV);
+    QVERIFY2(m_pOperate != Q_NULLPTR, "oper is null");
+    m_pOperate->setNumberA(12);
+    m_pOperate->setNumberB(4);
 
-    double result = pOperDiv->getResult();
+    double result = m_pOperate->getResult();
     qDebug()<<"div result:"<<result;
-
-    delete pOperDiv;
 }

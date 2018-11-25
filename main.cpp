@@ -3,6 +3,7 @@
 #include <QtTest>
 
 #include "test/TestSimpleFactory.h"
+#include "test/TestFactoryMethor.h"
 
 int AssertTest(QObject* obj)
 {
@@ -23,6 +24,7 @@ int main(int argc, char *argv[])
 
     int status = 0;
     status = AssertTest( new TestSimpleFactory());
+    status = AssertTest( new TestFactoryMethor());
 
     return status;
 }

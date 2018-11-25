@@ -1,15 +1,16 @@
-#ifndef TESTSIMPLEFACTORY_H
-#define TESTSIMPLEFACTORY_H
+#ifndef TESTFACTORYMETHOR_H
+#define TESTFACTORYMETHOR_H
 
 #include <QObject>
 
+class FactoryBase;
 class OperatorBase;
 
-class TestSimpleFactory : public QObject
+class TestFactoryMethor : public QObject
 {
     Q_OBJECT
 public:
-    explicit TestSimpleFactory(QObject *parent = nullptr);
+    explicit TestFactoryMethor(QObject *parent = nullptr);
 
 signals:
 
@@ -23,7 +24,8 @@ private Q_SLOTS:
     void testDivOperator();
 
 private:
+    FactoryBase *m_pFactory;
     OperatorBase *m_pOperate;
 };
 
-#endif // TESTSIMPLEFACTORY_H
+#endif // TESTFACTORYMETHOR_H
