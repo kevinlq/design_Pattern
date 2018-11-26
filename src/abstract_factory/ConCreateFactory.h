@@ -1,8 +1,10 @@
 #ifndef CONCREATEFACTORY_H
 #define CONCREATEFACTORY_H
 
+
 #include "Factory.h"
 #include "concrete_product.h"
+
 
 //奔驰
 class BenzFactory: public AFactory
