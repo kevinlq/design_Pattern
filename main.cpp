@@ -4,6 +4,7 @@
 
 #include "test/TestSimpleFactory.h"
 #include "test/TestFactoryMethor.h"
+#include "test/TestAbstractFactory.h"
 
 int AssertTest(QObject* obj)
 {
@@ -25,6 +26,7 @@ int main(int argc, char *argv[])
     int status = 0;
     status = AssertTest( new TestSimpleFactory());
     status = AssertTest( new TestFactoryMethor());
+    status = AssertTest( new TestAbstractFactory());
 
     return status;
 }
