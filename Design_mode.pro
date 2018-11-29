@@ -14,6 +14,8 @@ include($$PWD/src/simple_factory.pri)
 include($$PWD/src/factory_methor.pri)
 include($$PWD/src/abstract_factory.pri)
 include($$PWD/src/strategy.pri)
+include($$PWD/src/Decorator.pri)
+
 
 INCLUDEPATH +=$$PWD/src
 INCLUDEPATH +=$$PWD/src/factory_methor
