@@ -7,6 +7,8 @@
 #include "test/TestAbstractFactory.h"
 #include "test/TestStrategy.h"
 
+//https://blog.csdn.net/qq_15024587/article/details/79581893
+
 int AssertTest(QObject* obj)
 {
     int status = QTest::qExec(obj);
