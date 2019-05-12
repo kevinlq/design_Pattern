@@ -6,6 +6,7 @@
 #include "test/TestFactoryMethor.h"
 #include "test/TestAbstractFactory.h"
 #include "test/TestStrategy.h"
+#include "test/ReflectionTest.h"
 
 //https://blog.csdn.net/qq_15024587/article/details/79581893
 
@@ -31,6 +32,7 @@ int main(int argc, char *argv[])
     status = AssertTest( new TestFactoryMethor());
     status = AssertTest( new TestAbstractFactory());
     status = AssertTest( new TestStrategy());
+    status = AssertTest( new ReflectionTest());
 
     return status;
 }
